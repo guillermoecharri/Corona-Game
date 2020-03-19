@@ -29,5 +29,16 @@ public class PlayerController : MonoBehaviour
                 player.transform.position += new Vector3((speed * Time.deltaTime), 0, 0);
             }
         }
+        else //for testing on PC
+        {
+            if (Input.GetAxis("Horizontal") < 0)//move left
+            {
+                player.transform.position -= new Vector3((speed * Time.deltaTime), 0, 0);
+            }
+            else if (Input.GetAxis("Horizontal") > 0)//move right
+            {
+                player.transform.position += new Vector3((speed * Time.deltaTime), 0, 0);
+            }
+        }
     }
 }
