@@ -7,6 +7,8 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     float score;
+    int toiletPaperGrabbed = 0;
+    [SerializeField] float toiletPaperWorth = 10;
     [SerializeField] float displayMultiplier = 10;
     [SerializeField] TextMeshProUGUI scoreboard;
 
@@ -19,7 +21,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreboard.text = "Score: " + Mathf.RoundToInt(score * displayMultiplier);
+        scoreboard.text = "Score: " + (Mathf.RoundToInt(score * displayMultiplier) + Mathf.RoundToInt(toiletPaperGrabbed * toiletPaperWorth));
     }
 
     public void Add(float amount)
@@ -30,5 +32,10 @@ public class Score : MonoBehaviour
     public float GetScore()
     {
         return score;
+    }
+
+    public void AddToiletPaper(int amount)
+    {
+        toiletPaperGrabbed += amount;
     }
 }
