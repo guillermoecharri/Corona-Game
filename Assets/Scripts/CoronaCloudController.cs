@@ -14,6 +14,7 @@ public class CoronaCloudController : MonoBehaviour
     private static int platformBufferSize = 12; //all the platform layers loaded at once
     private GameObject[] activePlatforms = new GameObject[platformBufferSize];
     private bool playerIsInCloud;
+    [SerializeField] float spacingMultiplier = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class CoronaCloudController : MonoBehaviour
         for(int i = 0; i < platformBufferSize; i++)
         {
             Vector3 pos = gameObject.transform.position;
-            pos.y -= i + 1;
+            pos.y -= (i + 1) * spacingMultiplier;
             activePlatforms[i] = Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
         }
     }
@@ -48,9 +49,9 @@ public class CoronaCloudController : MonoBehaviour
             score.Add(movement);
             //increment platTracker
             platTracker += movement;
-            if(platTracker >= 1)
+            if(platTracker >= spacingMultiplier)
             {
-                platTracker -= 1;
+                platTracker -= spacingMultiplier;
                 UpdatePlatforms();
             }
         } 
@@ -64,7 +65,7 @@ public class CoronaCloudController : MonoBehaviour
             activePlatforms[i] = activePlatforms[i + 1];
         }
         Vector3 pos = gameObject.transform.position;
-        pos.y -= platformBufferSize;
+        pos.y -= platformBufferSize * spacingMultiplier;
         Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
     }
 
