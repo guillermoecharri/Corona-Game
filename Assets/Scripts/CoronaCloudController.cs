@@ -71,13 +71,22 @@ public class CoronaCloudController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //stop moving the cloud
-        playerIsInCloud = true;
+        if(collision.tag == "Player")
+        {
+            //stop moving the cloud
+            playerIsInCloud = true;
+        }
+        else
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         playerIsInCloud = false;
     }
+
+    
 
 }
