@@ -13,6 +13,9 @@ public class TurnCheck : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        enemy.GetComponent<EnemyController>().TurnAround();
+        if (collision.tag != "Player")
+        {
+            enemy.GetComponent<EnemyController>().TurnAround();
+        }
     }
 }

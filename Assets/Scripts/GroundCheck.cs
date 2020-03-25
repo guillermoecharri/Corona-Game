@@ -13,11 +13,17 @@ public class GroundCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemy.GetComponent<EnemyController>().SetIsGrounded(true);
+        if(collision.tag != "Player")
+        {
+            enemy.GetComponent<EnemyController>().SetIsGrounded(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        enemy.GetComponent<EnemyController>().SetIsGrounded(false);
+        if (collision.tag != "Player")
+        {
+            enemy.GetComponent<EnemyController>().SetIsGrounded(false);
+        }
     }
 }

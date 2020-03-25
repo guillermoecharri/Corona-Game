@@ -6,8 +6,11 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] float speed = 1;
     [SerializeField] GameObject enemy;
+    [SerializeField] float dps = 10;
     private bool isGrounded = false;
     private bool facingLeft = false;
+
+
 
     void FixedUpdate()
     {
@@ -39,6 +42,14 @@ public class EnemyController : MonoBehaviour
                 //move right
                 this.transform.position += new Vector3((speed * Time.deltaTime), 0, 0);
             }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHealth>().damage(dps * Time.deltaTime);
         }
     }
 }
