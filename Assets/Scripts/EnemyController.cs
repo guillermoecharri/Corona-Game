@@ -5,8 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] float speed = 1;
-    [SerializeField] GameObject enemy;
-    [SerializeField] float dps = 10;
+    [SerializeField] float damage = 20;
     private bool isGrounded = false;
     private bool facingLeft = false;
 
@@ -45,11 +44,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().damage(dps * Time.deltaTime);
+            collision.gameObject.GetComponent<PlayerHealth>().damage(damage);
+            collision.gameObject.GetComponent<PlayerHealth>().StartInvincibility();
         }
     }
 }
