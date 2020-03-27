@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 984610631809986867}
   - component: {fileID: 984610631809986876}
   - component: {fileID: 984610631809986864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Badie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,8 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  enemy: {fileID: 984610631809986877}
-  dps: 10
+  damage: 20
 --- !u!1 &984610633069186030
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +159,7 @@ GameObject:
   - component: {fileID: 984610633069186019}
   - component: {fileID: 984610633069186028}
   - component: {fileID: 984610633069186018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +280,7 @@ GameObject:
   - component: {fileID: 984610633196887470}
   - component: {fileID: 984610633196887468}
   - component: {fileID: 984610633196887469}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TurnCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}

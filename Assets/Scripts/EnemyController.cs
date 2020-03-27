@@ -9,8 +9,6 @@ public class EnemyController : MonoBehaviour
     private bool isGrounded = false;
     private bool facingLeft = false;
 
-
-
     void FixedUpdate()
     {
         Move();
