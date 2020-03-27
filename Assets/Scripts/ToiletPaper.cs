@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ToiletPaper : MonoBehaviour
 {
-    [SerializeField] Score scoreboard;
+    private GameObject scoreboard;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreboard = GameObject.FindGameObjectWithTag("Score");
     }
 
     // Update is called once per frame
@@ -21,7 +21,8 @@ public class ToiletPaper : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            scoreboard.AddToiletPaper(1);
+            scoreboard.GetComponent<Score>().AddToiletPaper(1);
+            //scoreboard.AddToiletPaper(1);
             Destroy(gameObject);
         }
     }
