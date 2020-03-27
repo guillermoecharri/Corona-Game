@@ -6,8 +6,8 @@ public class CoronaCloudController : MonoBehaviour
 {
     [SerializeField] GameObject cloud;
     [SerializeField] float speed;
-    [SerializeField] PlayerHealth playerHealth;
-    [SerializeField] float dps = 10;
+    //[SerializeField] PlayerHealth playerHealth;
+    //[SerializeField] float dps = 10;
     [SerializeField] Score score;
     [SerializeField] GameObject[] platforms;
     private float platTracker = 0;
@@ -31,10 +31,10 @@ public class CoronaCloudController : MonoBehaviour
 
     private void Update()
     {
-        if (playerIsInCloud)
-        {
-            playerHealth.damage(dps * Time.deltaTime);
-        }
+        //if (playerIsInCloud)
+        //{
+        //    playerHealth.damage(dps * Time.deltaTime);
+        //}
     }
 
     // Update is called once per frame
@@ -44,7 +44,8 @@ public class CoronaCloudController : MonoBehaviour
         {
             float movement = speed * Time.deltaTime;
             //move the cloud
-            cloud.transform.position = new Vector3(0, cloud.transform.position.y - movement, 0);
+            cloud.transform.Translate(new Vector3(0, -movement, 0));
+            //cloud.transform.position = new Vector3(0, cloud.transform.position.y - movement, 0);
             //add to score
             score.Add(movement);
             //increment platTracker

@@ -7,7 +7,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] float healthMax = 100;
     [SerializeField] float health = 100;
     [SerializeField] float invincibilityLength = 3.0f;
-    [SerializeField] private float invincibilityCounter;
+    [SerializeField] float handSanitizerInvincibilityLength = 4.0f;
+    private float invincibilityCounter;
 
     private void Start()
     {
@@ -57,6 +58,11 @@ public class PlayerHealth : MonoBehaviour
     public void StartInvincibility()
     {
         invincibilityCounter = invincibilityLength;
+    }
+
+    public void GiveHandSanitizerInvincibility()
+    {
+        invincibilityCounter = handSanitizerInvincibilityLength;
     }
 
     public bool GetIsInvincible()

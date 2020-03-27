@@ -21,7 +21,8 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreboard.text = "Score: " + (Mathf.RoundToInt(score * displayMultiplier) + Mathf.RoundToInt(toiletPaperGrabbed * toiletPaperWorth));
+        string stringScore = ((score * displayMultiplier) + (toiletPaperGrabbed * toiletPaperWorth)).ToString("0000000");
+        scoreboard.text = "Score: " + stringScore;
     }
 
     public void Add(float amount)
