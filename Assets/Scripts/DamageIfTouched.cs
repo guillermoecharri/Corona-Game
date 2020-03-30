@@ -52,7 +52,11 @@ public class DamageIfTouched : MonoBehaviour
         }
         else
         {
-            doDamage = true;
+            if(collision.gameObject.tag == "Player")
+            {
+                doDamage = true;
+            }
+            
         }
     }
 
