@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rightSideWrap : MonoBehaviour
+public class RightSideWrap : MonoBehaviour
 {
     [SerializeField] GameObject player;
     private void OnTriggerEnter2D(Collider2D collision)

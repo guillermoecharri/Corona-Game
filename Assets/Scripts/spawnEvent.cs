@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnEvent : MonoBehaviour
+public class SpawnEvent : MonoBehaviour
 {
     [SerializeField] GameObject[] items;
     [SerializeField] GameObject[] spawners;
