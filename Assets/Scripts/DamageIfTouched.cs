@@ -62,6 +62,9 @@ public class DamageIfTouched : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        doDamage = false;
+        if(collision.gameObject.tag == "Player")
+        {
+            doDamage = false;
+        }
     }
 }
