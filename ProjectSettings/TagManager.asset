@@ -48,6 +48,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: PlatformOutline
+    uniqueID: 2306747177
+    locked: 0
+  - name: Platform
+    uniqueID: 3963636485
+    locked: 0
   - name: Level
     uniqueID: 804821691
     locked: 0
