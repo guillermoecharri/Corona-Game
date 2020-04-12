@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8018032852252853075}
   - component: {fileID: 3545325050335293495}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: firstbiplat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7830123593768496262}
   - component: {fileID: 4647973152208167870}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: secondbiplat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2711755727538003982}
   - component: {fileID: 149794000891365565}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: biplat1
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -163,7 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22646235855c592469d38f964d9a1361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  platSpawner: {fileID: 0}
 --- !u!1001 &78037980497086715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,6 +174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 702978820671966255, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1552379060056986593, guid: 7e3b738546a93234894a67b41b5f129f,
         type: 3}
@@ -250,6 +254,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265514158199311259, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479684538168013333, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923907467367643066, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3b738546a93234894a67b41b5f129f, type: 3}
@@ -271,6 +290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 702978820671966255, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1552379060056986593, guid: 7e3b738546a93234894a67b41b5f129f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -346,6 +370,21 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.56
       objectReference: {fileID: 0}
+    - target: {fileID: 5265514158199311259, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479684538168013333, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923907467367643066, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3b738546a93234894a67b41b5f129f, type: 3}
 --- !u!4 &3860510217294726986 stripped
@@ -365,6 +404,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Platform1
+      objectReference: {fileID: 0}
+    - target: {fileID: 702978820671966255, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1552379060056986593, guid: 7e3b738546a93234894a67b41b5f129f,
         type: 3}
@@ -440,6 +484,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265514158199311259, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479684538168013333, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923907467367643066, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3b738546a93234894a67b41b5f129f, type: 3}
@@ -461,6 +520,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform2
       objectReference: {fileID: 0}
+    - target: {fileID: 702978820671966255, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1552379060056986593, guid: 7e3b738546a93234894a67b41b5f129f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -535,6 +599,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5265514158199311259, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479684538168013333, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8923907467367643066, guid: 7e3b738546a93234894a67b41b5f129f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3b738546a93234894a67b41b5f129f, type: 3}

@@ -99,7 +99,7 @@ public class CoronaCloudController : MonoBehaviour
         {
             if (pos.y < camera.transform.position.y)
             {
-                cloud.transform.Translate(new Vector3(0, movement, 0));
+                cloud.transform.Translate(new Vector3(0, -movement, 0));
             }
             else if (pos.y > camera.transform.position.y)
             {
