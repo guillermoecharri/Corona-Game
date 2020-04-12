@@ -15,6 +15,8 @@ public class CoronaCloudController : MonoBehaviour
     private GameObject[] activePlatforms = new GameObject[platformBufferSize];
     private bool playerIsInCloud;
     [SerializeField] float spacingMultiplier = 3;
+    [SerializeField] GameObject camera;
+    private bool playerIsAlive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +42,7 @@ public class CoronaCloudController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!playerIsInCloud)
+        if (!playerIsInCloud && playerIsAlive)
         {
             float movement = speed * Time.deltaTime;
             //move the cloud
@@ -88,6 +90,23 @@ public class CoronaCloudController : MonoBehaviour
         playerIsInCloud = false;
     }
 
-    
+    public void centerOnDeath(Vector3 pos)
+    {
+        playerIsAlive = false;
+        float movement = speed * Time.deltaTime;
+        float threshhold = 1.0f;
+        if (Mathf.Abs(pos.y - camera.transform.position.y) > threshhold)
+        {
+            if (pos.y < camera.transform.position.y)
+            {
+                cloud.transform.Translate(new Vector3(0, movement, 0));
+            }
+            else if (pos.y > camera.transform.position.y)
+            {
+                cloud.transform.Translate(new Vector3(0, movement, 0));
+            }
+        }
+       
+    }
 
 }

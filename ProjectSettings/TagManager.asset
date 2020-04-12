@@ -60,3 +60,6 @@ TagManager:
   - name: Level
     uniqueID: 804821691
     locked: 0
+  - name: Tint
+    uniqueID: 3054696345
+    locked: 0

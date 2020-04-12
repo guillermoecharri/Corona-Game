@@ -8,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] float health = 100;
     [SerializeField] float invincibilityLength = 3.0f;
     [SerializeField] float handSanitizerInvincibilityLength = 4.0f;
+    [SerializeField] GameObject deathMenu;
+    [SerializeField] GameObject coronaCloud;
     private float invincibilityCounter;
 
     private void Start()
@@ -50,8 +52,12 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0) //TODO!!!!!!!!!!!!!!!
         {
+            health = 0;
             Debug.Log("Game Over!");
             //To do: Change scene to main menu or something
+            deathMenu.SetActive(true);
+            coronaCloud.GetComponent<CoronaCloudController>().centerOnDeath(gameObject.transform.position);
+
         }
     }
 
