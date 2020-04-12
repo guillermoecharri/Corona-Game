@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Virus
   - Cloud
+  - Platform
+  - Spawner
   layers:
   - Default
   - TransparentFX

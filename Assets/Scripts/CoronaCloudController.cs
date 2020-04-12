@@ -23,12 +23,12 @@ public class CoronaCloudController : MonoBehaviour
     {
         playerIsInCloud = false;
 
-        for(int i = 0; i < platformBufferSize; i++)
-        {
-            Vector3 pos = gameObject.transform.position;
-            pos.y -= (i + 1) * spacingMultiplier;
-            activePlatforms[i] = Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
-        }
+        //for(int i = 0; i < platformBufferSize; i++)
+        //{
+        //    Vector3 pos = gameObject.transform.position;
+        //    pos.y -= (i + 1) * spacingMultiplier;
+        //    activePlatforms[i] = Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
+        //}
     }
 
     private void Update()
@@ -51,26 +51,26 @@ public class CoronaCloudController : MonoBehaviour
             //add to score
             score.Add(movement);
             //increment platTracker
-            platTracker += movement;
-            if(platTracker >= spacingMultiplier)
-            {
-                platTracker -= spacingMultiplier;
-                UpdatePlatforms();
-            }
+            //platTracker += movement;
+            //if (platTracker >= spacingMultiplier)
+            //{
+            //    platTracker -= spacingMultiplier;
+            //    UpdatePlatforms();
+            //}
         } 
     }
 
-    private void UpdatePlatforms()
-    {
-        Destroy(activePlatforms[0]);
-        for(int i = 0; i < platformBufferSize - 1; i++)
-        {
-            activePlatforms[i] = activePlatforms[i + 1];
-        }
-        Vector3 pos = gameObject.transform.position;
-        pos.y -= platformBufferSize * spacingMultiplier;
-        Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
-    }
+    //private void UpdatePlatforms()
+    //{
+    //    Destroy(activePlatforms[0]);
+    //    for(int i = 0; i < platformBufferSize - 1; i++)
+    //    {
+    //        activePlatforms[i] = activePlatforms[i + 1];
+    //    }
+    //    Vector3 pos = gameObject.transform.position;
+    //    pos.y -= platformBufferSize * spacingMultiplier;
+    //    Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
+    //}
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -92,7 +92,7 @@ public class CoronaCloudController : MonoBehaviour
 
     public void centerOnDeath(Vector3 pos)
     {
-        playerIsAlive = false;
+        playerIsAlive = false; //set true for continue
         float movement = speed * Time.deltaTime;
         float threshhold = 1.0f;
         if (Mathf.Abs(pos.y - camera.transform.position.y) > threshhold)
