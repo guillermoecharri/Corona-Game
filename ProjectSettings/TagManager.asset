@@ -54,6 +54,9 @@ TagManager:
   - name: Platform
     uniqueID: 3963636485
     locked: 0
+  - name: Virus
+    uniqueID: 4776547
+    locked: 0
   - name: Level
     uniqueID: 804821691
     locked: 0
