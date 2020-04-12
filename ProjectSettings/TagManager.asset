@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Score
   - Enemy
+  - Virus
+  - Cloud
   layers:
   - Default
   - TransparentFX
@@ -45,6 +47,15 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PlatformOutline
+    uniqueID: 2306747177
+    locked: 0
+  - name: Platform
+    uniqueID: 3963636485
+    locked: 0
+  - name: Virus
+    uniqueID: 4776547
     locked: 0
   - name: Level
     uniqueID: 804821691
