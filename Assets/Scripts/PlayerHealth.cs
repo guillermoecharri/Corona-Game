@@ -57,7 +57,7 @@ public class PlayerHealth : MonoBehaviour
             //To do: Change scene to main menu or something
             deathMenu.SetActive(true);
             coronaCloud.GetComponent<CoronaCloudController>().centerOnDeath(gameObject.transform.position);
-
+            gameObject.GetComponent<PlayerController>().SetAlive(false);
         }
     }
 

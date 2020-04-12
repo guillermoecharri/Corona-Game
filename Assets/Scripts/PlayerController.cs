@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] Animator animator;
     private bool movingRight = true;
+    private bool alive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //Mobile
-        if(Input.touchCount > 0)
+        if(Input.touchCount > 0 && alive)
         {
             Vector3 touchesPosition = Camera.main.ScreenToWorldPoint(Input.touches[0].position);
             animator.SetBool("isRunning", true);
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isRunning", false);
 
             //For Testing On PC
-            if (Input.GetAxis("Horizontal") != 0)
+            if (Input.GetAxis("Horizontal") != 0 && alive)
             {
 
                 animator.SetBool("isRunning", true);
@@ -79,5 +80,10 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.Rotate(0, 180, 0);
         }
         player.transform.position += new Vector3((speed * Time.deltaTime), 0, 0);
+    }
+
+    public void SetAlive(bool alive)
+    {
+        this.alive = alive;
     }
 }
