@@ -109,4 +109,9 @@ public class CoronaCloudController : MonoBehaviour
        
     }
 
+    public void PlayerRevived()
+    {
+        playerIsAlive = true;
+    }
+
 }

@@ -82,4 +82,9 @@ public class PlayerHealth : MonoBehaviour
             return false;
         }
     }
+
+    public void SetFullHealth()
+    {
+        health = healthMax;
+    }
 }

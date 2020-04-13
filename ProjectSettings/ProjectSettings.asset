@@ -728,10 +728,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 50f6505a-4037-412c-9457-a2f57a47d552
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Corona Game
+  organizationId: gemt-software
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
