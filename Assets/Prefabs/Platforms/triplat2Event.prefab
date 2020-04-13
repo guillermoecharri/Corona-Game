@@ -255,8 +255,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 336366019466822242}
-  - component: {fileID: 5886318125761862630}
   - component: {fileID: -8530093298535176474}
+  - component: {fileID: 107483767023492765}
   m_Layer: 12
   m_Name: triplat2Event
   m_TagString: Platform
@@ -286,7 +286,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5886318125761862630
+--- !u!114 &-8530093298535176474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5892149504439635917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22646235855c592469d38f964d9a1361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &107483767023492765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,18 +316,6 @@ MonoBehaviour:
   spawners:
   - {fileID: 6194798038731772436}
   - {fileID: 2849385733806190970}
---- !u!114 &-8530093298535176474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5892149504439635917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22646235855c592469d38f964d9a1361, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6040193596733882296
 GameObject:
   m_ObjectHideFlags: 0
