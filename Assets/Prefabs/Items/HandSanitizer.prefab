@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5698238228629505453}
   m_Layer: 0
   m_Name: HandSanitizer
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

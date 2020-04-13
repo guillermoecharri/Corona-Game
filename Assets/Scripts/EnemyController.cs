@@ -49,5 +49,9 @@ public class EnemyController : MonoBehaviour
             collision.gameObject.GetComponent<PlayerHealth>().damage(damage);
             collision.gameObject.GetComponent<PlayerHealth>().StartInvincibility();
         }
+        else
+        {
+            Debug.Log("Collided with: " + collision.gameObject.transform.root.name.ToString());
+        }
     }
 }

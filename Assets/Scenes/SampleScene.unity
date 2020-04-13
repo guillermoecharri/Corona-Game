@@ -578,7 +578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 56794090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 311638928}
   - component: {fileID: 311638929}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: VirusStorm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,6 +2181,7 @@ Transform:
   - {fileID: 1925547395}
   - {fileID: 519420032}
   - {fileID: 56794090}
+  - {fileID: 1566440708}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5533,6 +5534,59 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1721361396}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1566440707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566440708}
+  - component: {fileID: 1566440709}
+  m_Layer: 9
+  m_Name: platSpawner
+  m_TagString: Spawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566440708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566440707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 391087028}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1566440709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566440707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65fc40e1dcde9b2478705e347aea25ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spacingMultiplier: 2
+  platforms:
+  - {fileID: 1908898263336006439, guid: 99f6bb0dbbdcedd4ab02c1b027f77d7d, type: 3}
+  - {fileID: 2050296249119871626, guid: fba5a0e1b6b0b104bb3b58cab9791561, type: 3}
+  - {fileID: 5587964668655472372, guid: 544eb62c6bb55d444bdcbbd2c51a0dde, type: 3}
+  - {fileID: 7375480021766422978, guid: f5bcc4704f346f145b5e903f7ce50542, type: 3}
+  - {fileID: 3554440010237695375, guid: 3da7ca7ac8028b1419586cf01f2c1cec, type: 3}
+  - {fileID: 5892149504439635917, guid: 3dbcef47c11c63646928db1b679bc48d, type: 3}
+  - {fileID: 5892149504439635917, guid: 7c86748eb647654488a77ee6f79f1f6d, type: 3}
+  deleteThreshold: 30
 --- !u!4 &1591808309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1421245366667414928, guid: d2a4a1167d42bbb4ca5af7de671a5d89,
@@ -6320,7 +6374,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1762913480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.45, z: 0}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 391087028}
@@ -6339,7 +6393,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.43843746}
+  m_Offset: {x: 0, y: -10.379144}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6350,7 +6404,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.0150175, y: 0.12312508}
+  m_Size: {x: 8.0150175, y: 20.004538}
   m_EdgeRadius: 0
 --- !u!114 &1762913483
 MonoBehaviour:
@@ -6915,7 +6969,7 @@ GameObject:
   - component: {fileID: 1888877608}
   - component: {fileID: 1888877609}
   - component: {fileID: 1888877610}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left wrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7000,7 +7054,7 @@ GameObject:
   - component: {fileID: 1925547395}
   - component: {fileID: 1925547396}
   - component: {fileID: 1925547397}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: right wrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7233,7 +7287,7 @@ GameObject:
   - component: {fileID: 1999893341}
   - component: {fileID: 1999893343}
   - component: {fileID: 1999893342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7528,7 +7582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035177573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

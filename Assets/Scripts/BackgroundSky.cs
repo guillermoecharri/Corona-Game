@@ -45,7 +45,7 @@ public class BackgroundSky : MonoBehaviour
 
         //adjust v based on the brightness
         v = brightness;
-        Debug.Log("v: " + v);
+        //Debug.Log("v: " + v);
 
         //reset the color of the image
         sky.color = Color.HSVToRGB(h, s, v);

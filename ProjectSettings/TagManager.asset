@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Virus
   - Cloud
+  - Platform
+  - Spawner
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Invincible
   - Enemy
   - Cloud
-  - 
+  - Platform
   - 
   - 
   - 
