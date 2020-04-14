@@ -1739,7 +1739,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: longRunLeft
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6974655084681483960, guid: 544eb62c6bb55d444bdcbbd2c51a0dde, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 544eb62c6bb55d444bdcbbd2c51a0dde, type: 3}
 --- !u!1001 &781548336
 PrefabInstance:
@@ -3194,7 +3195,6 @@ GameObject:
   - component: {fileID: 1614101933}
   - component: {fileID: 1614101932}
   - component: {fileID: 1614101931}
-  - component: {fileID: 1614101934}
   - component: {fileID: 1614101935}
   m_Layer: 0
   m_Name: EventSystem
@@ -3251,18 +3251,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1614101934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614101930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 529596218ca968946b8be0b9891a7654, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1614101935
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
 
     public void OnUnityAdsDidError(string message)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Temp");
     }
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
@@ -39,17 +39,17 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
             cloud.GetComponent<CoronaCloudController>().PlayerRevived();
         }
         else if(showResult == ShowResult.Failed){
-
+            Debug.Log("Ads Failed");
         }
     }
 
     public void OnUnityAdsDidStart(string placementId)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Temp");
     }
 
     public void OnUnityAdsReady(string placementId)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Temp");
     }
 }
