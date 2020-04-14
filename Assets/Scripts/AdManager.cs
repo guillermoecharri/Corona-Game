@@ -25,7 +25,6 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
 
     public void OnUnityAdsDidError(string message)
     {
-        Debug.Log("Temp");
     }
 
     public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
@@ -45,11 +44,9 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
 
     public void OnUnityAdsDidStart(string placementId)
     {
-        Debug.Log("Temp");
     }
 
     public void OnUnityAdsReady(string placementId)
     {
-        Debug.Log("Temp");
     }
 }

@@ -9,10 +9,19 @@ public class PlatSpawner : MonoBehaviour
     [SerializeField] GameObject[] platforms;
     GameObject lastPlat;
     [SerializeField] float deleteThreshold = 40;
+    [SerializeField] GameObject playerSpawner; //remove later
+    [SerializeField] GameObject player;
+    bool spawnPlatFound = false;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        //playerSpawner.SetActive(true); //delete later
+    }
+
     void Start()
     {
+        
         //establish starting position for spawning platforms
         Vector3 startingPos = gameObject.transform.position;
         startingPos.y += platformBufferSize * spacingMultiplier;
@@ -23,7 +32,17 @@ public class PlatSpawner : MonoBehaviour
             Vector3 pos = new Vector3(0, startingPos.y - i * spacingMultiplier, 0);
             if(i < platformBufferSize - 1)
             {
-                Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
+                if((player.transform.position.y - pos.y) >= (spacingMultiplier/2) && !spawnPlatFound)
+                {
+                    spawnPlatFound = true;
+                    GameObject spawnPlat = Instantiate(platforms[Random.Range(1, 5)], pos, Quaternion.identity);
+                    player.transform.position = new Vector3(spawnPlat.transform.position.x, spawnPlat.transform.position.y + 0.5f, spawnPlat.transform.position.z);
+                }
+                else
+                {
+                    Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity); // original
+                }
+                
             }
             else
             {

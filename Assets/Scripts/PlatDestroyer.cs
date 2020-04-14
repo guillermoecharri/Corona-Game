@@ -19,16 +19,16 @@ public class PlatDestroyer : MonoBehaviour
         this.deleteThreshold = deleteThreshold;
     }
 
-    private void Update() //once per year yeeeeeeeeeeee
+    private void Update() 
     {
         float platformPos = gameObject.transform.position.y;
         float spawnerPos = platSpawner.transform.position.y;
         if (platformPos - spawnerPos > deleteThreshold)
         {
-            Debug.Log("pls spawn");
+            
             platSpawner.GetComponent<PlatSpawner>().SpawnPlatform();
             Destroy(this.gameObject);
-            Debug.Log("pls spawn called");
+            
         }
     }
 
