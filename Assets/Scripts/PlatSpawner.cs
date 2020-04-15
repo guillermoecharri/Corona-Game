@@ -47,7 +47,7 @@ public class PlatSpawner : MonoBehaviour
             else
             {
                 lastPlat = Instantiate(platforms[Random.Range(0, platforms.Length)], pos, Quaternion.identity);
-                Debug.Log("In Start() of PlatSpawner, lastPlat spawned at y pos: " + pos.y);
+                //Debug.Log("In Start() of PlatSpawner, lastPlat spawned at y pos: " + pos.y);
             }
         }
     }
@@ -56,7 +56,7 @@ public class PlatSpawner : MonoBehaviour
     {
         Vector3 newPlatPos = new Vector3(lastPlat.transform.position.x, lastPlat.transform.position.y - spacingMultiplier, lastPlat.transform.position.z);
         lastPlat = Instantiate(platforms[Random.Range(0, platforms.Length)], newPlatPos, Quaternion.identity) as GameObject;
-        Debug.Log("spawning new play at y-position: " + newPlatPos);
+        //Debug.Log("spawning new play at y-position: " + newPlatPos);
     }
 
     public float GetDeleteThreshold()

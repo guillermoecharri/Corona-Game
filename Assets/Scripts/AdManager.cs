@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
@@ -9,13 +10,13 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     [SerializeField] GameObject deathMenu;
     [SerializeField] GameObject player;
     [SerializeField] GameObject cloud;
+    [SerializeField] GameObject continueButton;
 
     // Start is called before the first frame update
     void Start()
     {
         Advertisement.AddListener(this);
         Advertisement.Initialize("3552890", true);
-
     }
 
     public void ShowAd(string p)
@@ -31,11 +32,16 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     {
         if (showResult == ShowResult.Finished)
         {
+            //StartCoroutine(WaitTimer());
+
             //reward
             deathMenu.SetActive(false);
+            continueButton.SetActive(false);
             player.GetComponent<PlayerController>().SetAlive(true);
             player.GetComponent<PlayerHealth>().SetFullHealth();
             cloud.GetComponent<CoronaCloudController>().PlayerRevived();
+
+            //Destroy(gameObject);
         }
         else if(showResult == ShowResult.Failed){
             Debug.Log("Ads Failed");
@@ -49,4 +55,21 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
     public void OnUnityAdsReady(string placementId)
     {
     }
-}
+
+    /*void OnDestroy()
+    {
+        Debug.Log("DestroyAdController");
+        myButton.onClick.RemoveListener(ShowRewardedVideo);
+        Advertisement.RemoveListener(this);
+    }*/
+    void OnDestroy()
+    {
+        Advertisement.RemoveListener(this);
+    }
+
+    /*IEnumerator WaitTimer()
+    {
+
+        yield return new WaitForSeconds(1);
+    }*/
+    }

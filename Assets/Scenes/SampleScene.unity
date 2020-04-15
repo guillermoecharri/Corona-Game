@@ -2894,7 +2894,7 @@ GameObject:
   - component: {fileID: 647429804}
   m_Layer: 5
   m_Name: deathMenu
-  m_TagString: Untagged
+  m_TagString: DeathMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6481,6 +6481,7 @@ MonoBehaviour:
   deathMenu: {fileID: 647429803}
   player: {fileID: 769673015}
   cloud: {fileID: 391087024}
+  continueButton: {fileID: 1594859643}
 --- !u!1001 &1749160707
 PrefabInstance:
   m_ObjectHideFlags: 0

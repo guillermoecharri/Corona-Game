@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Collided with: " + collision.gameObject.transform.root.name.ToString());
+            //Debug.Log("Collided with: " + collision.gameObject.transform.root.name.ToString());
         }
     }
 }

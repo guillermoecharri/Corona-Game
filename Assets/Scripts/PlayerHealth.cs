@@ -53,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0) //TODO!!!!!!!!!!!!!!!
         {
             health = 0;
-            Debug.Log("Game Over!");
+            //Debug.Log("Game Over!");
             //To do: Change scene to main menu or something
             deathMenu.SetActive(true);
             coronaCloud.GetComponent<CoronaCloudController>().centerOnDeath(gameObject.transform.position);
