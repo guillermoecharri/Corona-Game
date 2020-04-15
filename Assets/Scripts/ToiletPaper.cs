@@ -5,16 +5,12 @@ using UnityEngine;
 public class ToiletPaper : MonoBehaviour
 {
     private GameObject scoreboard;
+    [SerializeField] GameObject itemGrab;
+
     // Start is called before the first frame update
     void Start()
     {
         scoreboard = GameObject.FindGameObjectWithTag("Score");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,7 +18,7 @@ public class ToiletPaper : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             scoreboard.GetComponent<Score>().AddToiletPaper(1);
-            //scoreboard.AddToiletPaper(1);
+            Instantiate(itemGrab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(gameObject);
         }
     }

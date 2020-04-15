@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     float horizontalMovement;
-    [SerializeField] float speed = 1;
+    [SerializeField] float speed = 2;
     [SerializeField] GameObject player;
     [SerializeField] Animator animator;
+    [SerializeField] Animator outlineAnimator;
     private bool movingRight = true;
     private bool alive = true;
 
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 touchesPosition = Camera.main.ScreenToWorldPoint(Input.touches[0].position);
             animator.SetBool("isRunning", true);
+            outlineAnimator.SetBool("isRunning", true);
 
             if (touchesPosition.x < 0) //move left
             {
@@ -37,12 +39,14 @@ public class PlayerController : MonoBehaviour
         }
         else {
             animator.SetBool("isRunning", false);
+            outlineAnimator.SetBool("isRunning", false);
 
             //For Testing On PC
             if (Input.GetAxis("Horizontal") != 0 && alive)
             {
 
                 animator.SetBool("isRunning", true);
+                outlineAnimator.SetBool("isRunning", true);
 
                 if (Input.GetAxis("Horizontal") < 0)//move left
                 {
@@ -56,6 +60,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 animator.SetBool("isRunning", false);
+                outlineAnimator.SetBool("isRunning", false);
             }
         }
 

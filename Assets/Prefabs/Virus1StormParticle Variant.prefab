@@ -33,6 +33,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4234ea302eca4ba4288127425fcb6b72,
         type: 3}
+    - target: {fileID: 3580343057491687430, guid: b550861d61726ca44bf7785645bab904,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -873994125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580343057491687430, guid: b550861d61726ca44bf7785645bab904,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580343057491687430, guid: b550861d61726ca44bf7785645bab904,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4117763515328805492, guid: b550861d61726ca44bf7785645bab904,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -91,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 8622398494766974182, guid: b550861d61726ca44bf7785645bab904,
         type: 3}
       propertyPath: m_Name
-      value: Virus1StormParticle
+      value: Virus1StormParticle Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8622398494766974182, guid: b550861d61726ca44bf7785645bab904,
         type: 3}
