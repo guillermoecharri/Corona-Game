@@ -11,6 +11,25 @@ public class PlayerSkin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Refresh();
+    }
+
+    public int GetSkinNum()
+    {
+        return skinNum;
+    }
+
+    public void LoadPlayerSkin()
+    {
+        SaveData data = SaveSystem.LoadPlayerSkin();
+        skinNum = data.skinNum;
+    }
+
+    public void Refresh()
+    {
+        //load from save
+        LoadPlayerSkin();
+
         //handle skin
         if (skinNum == 0)//Male1
         {
@@ -36,17 +55,17 @@ public class PlayerSkin : MonoBehaviour
         {
             playerAnimator.runtimeAnimatorController = Resources.Load("Animations/Characters/Female2/Female2Controller", typeof(RuntimeAnimatorController)) as RuntimeAnimatorController;
         }
-        else if(skinNum == 6)//Female3
+        else if (skinNum == 6)//Female3
         {
             playerAnimator.runtimeAnimatorController = Resources.Load("Animations/Characters/Female3/Female3Controller", typeof(RuntimeAnimatorController)) as RuntimeAnimatorController;
         }
-        else if(skinNum == 7)//Female4
+        else if (skinNum == 7)//Female4
         {
             playerAnimator.runtimeAnimatorController = Resources.Load("Animations/Characters/Female4/Female4Controller", typeof(RuntimeAnimatorController)) as RuntimeAnimatorController;
         }
 
         //handle outline
-        if(skinNum < 4) //male outline
+        if (skinNum < 4) //male outline
         {
             outlineAnimator.runtimeAnimatorController = Resources.Load("Animations/Characters/Outlines/MaleOutlineController", typeof(RuntimeAnimatorController)) as RuntimeAnimatorController;
         }
@@ -54,5 +73,12 @@ public class PlayerSkin : MonoBehaviour
         {
             outlineAnimator.runtimeAnimatorController = Resources.Load("Animations/Characters/Outlines/FemaleOutlineController", typeof(RuntimeAnimatorController)) as RuntimeAnimatorController;
         }
+    }
+
+    public void EquipSkin(int skinNum)
+    {
+        this.skinNum = skinNum; //set new skinNum
+        SaveSystem.SavePlayerSkin(this); //save new PlayerSkin
+        Refresh(); //refresh
     }
 }
