@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] float speed = 1;
+    private float speed = 0;
+    [SerializeField] float minSpeed = 1;
+    [SerializeField] float maxSpeed = 2;
     [SerializeField] float damage = 20;
     private bool isGrounded = false;
     private bool facingLeft = false;
+    [SerializeField] Animator animator;
+    [SerializeField] Animator outlineAnimator;
+
+    private void Start()
+    {
+        speed = Random.Range(minSpeed, maxSpeed);
+        animator.SetBool("isRunning", true);
+        outlineAnimator.SetBool("isRunning", true);
+    }
 
     void FixedUpdate()
     {
