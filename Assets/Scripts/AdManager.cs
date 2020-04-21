@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.UI;
 
 public class AdManager : MonoBehaviour, IUnityAdsListener
 {
@@ -36,7 +37,7 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
 
             //reward
             deathMenu.SetActive(false);
-            continueButton.SetActive(false);
+            continueButton.GetComponent<Button>().interactable = false;
             player.GetComponent<PlayerController>().SetAlive(true);
             player.GetComponent<PlayerHealth>().SetFullHealth();
             cloud.GetComponent<CoronaCloudController>().PlayerRevived();
