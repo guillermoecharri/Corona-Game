@@ -6,6 +6,7 @@ public class HandSanitizer : MonoBehaviour
 {
     [SerializeField] float healAmount = 10;
     [SerializeField] GameObject itemGrab;
+    [SerializeField] GameObject AudioManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,7 +14,13 @@ public class HandSanitizer : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerHealth>().Heal(healAmount);
             Instantiate(itemGrab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            PlayItemSound();
             Destroy(gameObject);
         }
+    }
+
+    private void PlayItemSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Item");
     }
 }

@@ -5,6 +5,9 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private Sound[] sounds;
     private static AudioManager instance;
+    private float userVolumeUI = 0.5f;
+    private float userVolumeGame = 0.5f;
+    private float userVolumeMusic = 0.5f;
 
     // Start is called before the first frame update
     void Awake()
@@ -65,25 +68,40 @@ public class AudioManager : MonoBehaviour
                 sounds[i].ChangeVolume(volume);
             }
         }
-    }
 
-    public void AdjustVolumeUI (float volume) //work around function since unity buttons cannot pass enums or multiple arguments
-    {
-        AdjustVolume(SoundType.UI, volume);
-    }
-
-    public void AdjustVolumeMusic (float volume)
-    {
-        AdjustVolume(SoundType.Music, volume);
-    }
-
-    public void AdjustVolumeGame(float volume)
-    {
-        AdjustVolume(SoundType.Game, volume);
+        if(soundType == SoundType.Game)
+        {
+            userVolumeGame = volume;
+        }
+        else if (soundType == SoundType.UI)
+        {
+            userVolumeUI = volume;
+        }
+        else if (soundType == SoundType.Music)
+        {
+            userVolumeMusic = volume;
+        }
     }
 
     public void Mute(SoundType soundType)
     {
         AdjustVolume(soundType, 0f);
     }
+
+    public float GetUserVolume(SoundType soundType)
+    {
+        if (soundType == SoundType.Game)
+        {
+            return userVolumeGame;
+        }
+        else if (soundType == SoundType.Music)
+        {
+            return userVolumeMusic;
+        }
+        else //soundType == SoundType.UI
+        {
+            return userVolumeUI;
+        }
+    }
+
 }

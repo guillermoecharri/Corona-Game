@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mask : MonoBehaviour
 {
     [SerializeField] GameObject itemGrab;
+    [SerializeField] GameObject AudioManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,7 +13,13 @@ public class Mask : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerHealth>().GiveMaskInvincibility();
             Instantiate(itemGrab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            PlayItemSound();
             Destroy(gameObject);
         }
+    }
+
+    private void PlayItemSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Item");
     }
 }

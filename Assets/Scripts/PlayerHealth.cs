@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] float flashingLengthMax = 3; //How long the character should flash upon taking damage. Flashing is done by enabling/disabling the sprite component.
     [SerializeField] float flashingFrequency = 0.5f;
     private float invincibilityCounter;
+    private bool markedDead = false;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
             health -= damage;
             if (flashingLength == 0)
             {
+                FindObjectOfType<AudioManager>().Play("Damage");
                 flashingLength = flashingLengthMax;
             }
         }
@@ -93,12 +95,15 @@ public class PlayerHealth : MonoBehaviour
         }
 
         //Death
-        if (health <= 0) //TODO!!!!!!!!!!!!!!!
+        if (health <= 0)
         {
-            health = 0;
-            flashingLength = 0;
-            Debug.Log("Game Over!");
-            //To do: Change scene to main menu or something
+            if(markedDead == false) //for first loop task
+            {
+                health = 0;
+                flashingLength = 0;
+                FindObjectOfType<AudioManager>().Play("Game Over");
+                markedDead = true;
+            }
             deathMenu.SetActive(true);
             coronaCloud.GetComponent<CoronaCloudController>().centerOnDeath(gameObject.transform.position);
             gameObject.GetComponent<PlayerController>().SetAlive(false);
@@ -136,10 +141,12 @@ public class PlayerHealth : MonoBehaviour
         {
             health = healthMax;
         }
+        markedDead = false;
     }
 
     public void SetFullHealth()
     {
         health = healthMax;
+        markedDead = false;
     }
 }

@@ -6,6 +6,7 @@ public class ToiletPaper : MonoBehaviour
 {
     private GameObject scoreboard;
     [SerializeField] GameObject itemGrab;
+    [SerializeField] GameObject AudioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,13 @@ public class ToiletPaper : MonoBehaviour
         {
             scoreboard.GetComponent<Score>().AddToiletPaper(1);
             Instantiate(itemGrab, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            PlayItemSound();
             Destroy(gameObject);
         }
+    }
+
+    private void PlayItemSound()
+    {
+        FindObjectOfType<AudioManager>().Play("Item");
     }
 }
