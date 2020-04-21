@@ -612,6 +612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4752336129685653588}
+  - component: {fileID: 8447332287343138934}
   m_Layer: 5
   m_Name: Unlock - Section 1
   m_TagString: Untagged
@@ -641,6 +642,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8447332287343138934
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752336129685653579}
+  m_CullTransparentMesh: 0
 --- !u!1 &4752336129837272864
 GameObject:
   m_ObjectHideFlags: 0
