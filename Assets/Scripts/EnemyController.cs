@@ -8,8 +8,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float minSpeed = 1;
     [SerializeField] float maxSpeed = 2;
     [SerializeField] float damage = 20;
-    private bool isGrounded = false;
-    private bool facingLeft = false;
+    [SerializeField] private bool isGrounded = false;
+    [SerializeField] private bool facingLeft = false;
     [SerializeField] Animator animator;
     [SerializeField] Animator outlineAnimator;
 

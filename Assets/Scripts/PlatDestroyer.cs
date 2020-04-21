@@ -27,6 +27,10 @@ public class PlatDestroyer : MonoBehaviour
         {
             
             platSpawner.GetComponent<PlatSpawner>().SpawnPlatform();
+            foreach (Transform child in gameObject.transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
             Destroy(this.gameObject);
             
         }

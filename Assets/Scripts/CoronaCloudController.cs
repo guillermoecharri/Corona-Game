@@ -5,7 +5,10 @@ using UnityEngine;
 public class CoronaCloudController : MonoBehaviour
 {
     [SerializeField] GameObject cloud;
-    [SerializeField] float speed;
+    [SerializeField] float startingSpeed = 1.0f;
+    [SerializeField] private float speed;
+    [SerializeField] float maxSpeed = 2.8f;
+    [SerializeField] float speedScale = 200;
     //[SerializeField] PlayerHealth playerHealth;
     //[SerializeField] float dps = 10;
     [SerializeField] Score score;
@@ -21,6 +24,7 @@ public class CoronaCloudController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        speed = startingSpeed;
         playerIsInCloud = false;
 
         //for(int i = 0; i < platformBufferSize; i++)
@@ -42,6 +46,12 @@ public class CoronaCloudController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(speed < maxSpeed)
+        {
+            speed = startingSpeed + score.GetComponent<Score>().GetScore() / speedScale;
+        }
+        
+
         if (!playerIsInCloud && playerIsAlive)
         {
             float movement = speed * Time.deltaTime;
