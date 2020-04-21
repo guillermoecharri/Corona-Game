@@ -13,6 +13,7 @@ public class Score : MonoBehaviour
     [SerializeField] float displayMultiplier = 10;
     [SerializeField] TextMeshProUGUI scoreboard;
     [SerializeField] TextMeshProUGUI scoreboardDeathMenu;
+    [SerializeField] TextMeshProUGUI pauseMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class Score : MonoBehaviour
         string stringScore = ((score * displayMultiplier) + (toiletPaperGrabbed * toiletPaperWorth)).ToString("0000000");
         scoreboard.text = "Score: " + stringScore;
         scoreboardDeathMenu.text = "Score: " + stringScore;
+        pauseMenu.text = "Score: " + stringScore;
     }
 
     public void Add(float amount)
