@@ -48,7 +48,7 @@ public class Score : MonoBehaviour
 
     public void SaveScore()
     {
-        hiscores.AddToHiscores(Mathf.RoundToInt(score * displayMultiplier));
+        hiscores.AddToHiscores(Mathf.RoundToInt((score * displayMultiplier) + (toiletPaperGrabbed * toiletPaperWorth)));
         SaveSystem.SaveHiscores(hiscores);
     }
 }

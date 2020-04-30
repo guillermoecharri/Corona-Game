@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -557,10 +557,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.34509805, g: 0.5294118, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.050980393, g: 0.32156864, b: 1, a: 1}
-    m_PressedColor: {r: 0.050980397, g: 0.32156864, b: 1, a: 1}
-    m_SelectedColor: {r: 0.34509805, g: 0.5294118, b: 1, a: 1}
+    m_NormalColor: {r: 0.050980397, g: 0.32156864, b: 1, a: 1}
+    m_HighlightedColor: {r: 0, g: 0.1764706, b: 0.6117647, a: 1}
+    m_PressedColor: {r: 0, g: 0.17484024, b: 0.6132076, a: 1}
+    m_SelectedColor: {r: 0.050980397, g: 0.32156864, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -575,7 +575,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 4752336129040678263}
   m_OnClick:
     m_PersistentCalls:
@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.34509805, g: 0.5294118, b: 1, a: 1}
+  m_Color: {r: 0.050980393, g: 0.32156864, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
