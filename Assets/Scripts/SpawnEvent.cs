@@ -7,16 +7,29 @@ public class SpawnEvent : MonoBehaviour
     [SerializeField] GameObject[] items;
     [SerializeField] int[] odds;
     [SerializeField] GameObject[] spawners;
-
+    private Score score;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < spawners.Length; i++)
+        score = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
+        bool hasBadie = false;
+        for(int i = 0; i < items.Length; i++)
         {
-            Vector3 pos = spawners[i].transform.position;
-            Instantiate(items[Randomizer()], pos, Quaternion.identity);
+            if(items[i].name == "Badie")
+            {
+                hasBadie = true;
+            }
         }
+
+        if(score.GetScore() > 1 || hasBadie == false) //don't spawn anything when the score is 0
+        {
+            for (int i = 0; i < spawners.Length; i++)
+            {
+                Vector3 pos = spawners[i].transform.position;
+                Instantiate(items[Randomizer()], pos, Quaternion.identity);
+            }
+        } 
     }
 
     /*

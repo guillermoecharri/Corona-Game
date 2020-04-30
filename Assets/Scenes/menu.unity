@@ -2043,7 +2043,7 @@ PrefabInstance:
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
       propertyPath: m_text
-      value: "Score Requirement: \n1500"
+      value: "Score Requirement: \n2000"
       objectReference: {fileID: 0}
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
@@ -6329,7 +6329,7 @@ PrefabInstance:
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
@@ -6364,7 +6364,7 @@ PrefabInstance:
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
       propertyPath: m_text
-      value: "Score Requirement: \n3500"
+      value: "Score Requirement: \n10000"
       objectReference: {fileID: 0}
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
@@ -6921,7 +6921,7 @@ PrefabInstance:
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
       propertyPath: m_text
-      value: "Score Requirement: \n3000"
+      value: "Score Requirement: \n8000"
       objectReference: {fileID: 0}
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
@@ -14559,7 +14559,7 @@ MonoBehaviour:
   - {fileID: 1005730114}
   - {fileID: 22533965}
   - {fileID: 2135731012}
-  scoreRequirements: 00000000f4010000e8030000dc050000d0070000c4090000b80b0000ac0d0000
+  scoreRequirements: 00000000f4010000e8030000d0070000a00f000070170000401f000010270000
   playerSkin: {fileID: 199963241}
 --- !u!1 &2053878305
 GameObject:
@@ -14978,7 +14978,7 @@ PrefabInstance:
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
       propertyPath: m_text
-      value: "Score Requirement: \n2000"
+      value: "Score Requirement: \n4000"
       objectReference: {fileID: 0}
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
@@ -15548,7 +15548,7 @@ PrefabInstance:
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
       propertyPath: m_text
-      value: "Score Requirement: \n2500"
+      value: "Score Requirement: \n6000"
       objectReference: {fileID: 0}
     - target: {fileID: 4752336128530858979, guid: 3895fd9157934ba49b9672db7cbad53a,
         type: 3}
